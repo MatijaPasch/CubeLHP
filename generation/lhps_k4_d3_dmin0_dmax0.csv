@@ -1,0 +1,46 @@
+LOOSE PATHS IN THE CUBE HYPERGRAPH
+
+
+EXPOSITION AND DEFINITIONS
+
+Cube Hypergraph,"k-uniform d-regular hypergraph H(k,d) with vertices X^d, X={0,...,k-1}, and hyperedges {v_x:x in X}, where (v_x)_c=x, u=v_x o f_c and f_c:[d-1]->[d]\{c} is the enumeration, for all u in [k]^{d-1} and c in [d]"
+Loose Hamilton path length (=hyperedge count),"m=(k^d-1)/(k-1)"
+Minimum loose path (LP) length,"m_min=m-dmin"
+Maximum LP length,"m_max=m-dmax"
+Ordered LP,"A bijection v:[k^d]->[k]^d such that e_i={v_{1+(i-1)(k-1)},...,v_{1+i(k-1)}} is a hyperedge in H(k,d) for all i in {1,...,m'} with m' in [m_min,m_max]"
+,"The starting point is v_1 and the end point is v_{1+m'(k-1)}"
+Directed LP,"Directed LP for ordered LP v is (u_0,e_1,u_1,e_2,...,u_{m'-1},e_m',u_m'), where u_0=v_1, e_i from above and u_i=v_{1+i(k-1)}"
+,"Starting point is u_0 and end point is u_m'"
+Undirected LP,"Undirected LP for directed LP (u_0,e_1,...,e_m',u_m') is {(u_0,e_1,...,e_m',u_m'),(u_m',e_m',...,e_1,u_0)}"
+,"End points are u_0 and u_m'"
+Graph isomorphisms,"For each vertex v in H(k,d) fix an automorphism f_v:H(k,d)->H(k,d) that takes v to the origin"
+,"Any directed LP with starting point v is taken to a directed LP with the origin as starting point under f_v"
+Type 1 LPs,"Directed LP starting at the origin with the following properties"
+,"Let i_j be the step where the j-th 0 was changed for the first time, e.g. i_1=1 because we change a coordinate of the origin in the first step and i_2=2 because we have to change another coordinate in the second step. Let c_j be the unique coordinate in which u_{i_j} and u_{i_j-1} differ. Then we have c_j=j for all j in [d]"
+,"Let i_{c,j} be the step where u_i takes a value (in X) on coordinate c that has not appeared before (on coordinate c) for the j-th time. Let x_{c,j} be this new value. Then we have x_{c,j}=j for all j in [k-1] and all c in [d]"
+Type 2 LPs,"A type 2 LP is a directed LP with the origin as starting point"
+,"Equivalently, a type 2 LP is given by a type 1 LP, a bijection [d]->[d] to fix the order in which the coordinates are explored and d bijections [k-1]->[k-1] to fix the order in which the values are explored, per coordinate"
+Type 3 LPs,"directed LPs or equivalently given by a pair of a type 2 LP and a starting point v (using the fixed isomorphism f_v from above)"
+
+RESULTS
+
+k,4
+d,3
+#vertices,64
+#edges,48
+m,21
+m_min,21
+m_max,21
+Type 2 LPs per Type 1 LP,1296
+Type 3 LPs per Type 2 LP,64
+Type 3 LPs per Type 1 LP,82944
+
+TYPE 1 LPS (displayed as ordered LPs)
+
+Length,v[0],v[1],v[2],v[3],v[4],v[5],v[6],v[7],v[8],v[9],v[10],v[11],v[12],v[13],v[14],v[15],v[16],v[17],v[18],v[19],v[20],v[21],v[22],v[23],v[24],v[25],v[26],v[27],v[28],v[29],v[30],v[31],v[32],v[33],v[34],v[35],v[36],v[37],v[38],v[39],v[40],v[41],v[42],v[43],v[44],v[45],v[46],v[47],v[48],v[49],v[50],v[51],v[52],v[53],v[54],v[55],v[56],v[57],v[58],v[59],v[60],v[61],v[62],v[63]
+
+NUMBERS OF DIRECTED LPS (for undirected LPs divide by 2)
+
+Length,Type 1,Type 2,Type 3
+21,0,0,0
+Total,0,0,0
